@@ -2,9 +2,25 @@
   "expo": {
     "name": "mediRemind-app",
     "slug": "mediRemind-app",
+    "scheme": "mediRemind-app",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "ios": {
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "assetBundlePatterns": ["**/*"],
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": ["js", "jsx", "ts", "tsx", "svg"]
+    },
+    "plugins": ["expo-router"]
   }
 }
