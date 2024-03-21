@@ -11,7 +11,7 @@ export default function TabsLayout() {
       }}
     >
       <Tabs.Screen
-        name="pill"
+        name="index"
         options={{
           title: "Medicamentos",
           headerShown: false,

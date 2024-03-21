@@ -26,7 +26,7 @@ export default function Pill() {
           </TouchableOpacity>
         </View>
 
-        <View className="bg-[#ddd] flex-1 p-4">
+        <View className="flex-1 p-4">
           <Text className="text-xl font-bold mb-2">Seus Medicamentos</Text>
           <View className="border"></View>
         </View>

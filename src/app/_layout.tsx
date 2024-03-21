@@ -10,7 +10,7 @@ export default function AppLayout() {
     <>
       <StatusBar style="dark" />
       <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="(app)/(tabs)" options={{ headerShown: false }} />
       </Stack>
     </>
   );
