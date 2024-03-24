@@ -1,4 +1,4 @@
-import { Tabs } from "expo-router";
+import { Tabs } from "expo-router/tabs";
 import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function TabsLayout() {
@@ -7,11 +7,11 @@ export default function TabsLayout() {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: true,
-        tabBarActiveTintColor: "#C22612",
+        tabBarActiveTintColor: "#ed303c",
       }}
     >
       <Tabs.Screen
-        name="index"
+        name="pill"
         options={{
           title: "Medicamentos",
           headerShown: false,
