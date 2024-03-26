@@ -1,10 +1,14 @@
-import { Image } from "react-native";
 import { SafeAreaView, Text, View } from "react-native";
 import { Fontisto, MaterialCommunityIcons } from "@expo/vector-icons";
-import { Link } from "expo-router";
+import { router } from "expo-router";
+
 import { Button } from "@/components/Button";
 
 export default function WelcomeScreen() {
+  const goToNavigate = () => {
+    router.navigate("/(tabs)/pill");
+  };
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#ddd" }}>
       <View className="mt-10 relative p-8 flex-1 items-center justify-center">
@@ -26,15 +30,14 @@ export default function WelcomeScreen() {
           </View>
 
           <View className="absolute bottom-7 w-10/12">
-            <Link href="/(tabs)/pill" asChild>
-              <Button
-                label="Adicionar um medicamento"
-                variant="secondary"
-                labelClasses="text-white font-bold"
-                className="bg-[#ed303c]"
-                size="default"
-              ></Button>
-            </Link>
+            <Button
+              label="Adicionar um medicamento"
+              variant="secondary"
+              labelClasses="text-white font-bold"
+              className="bg-[#ed303c]"
+              size="default"
+              onPress={goToNavigate}
+            />
           </View>
         </View>
       </View>

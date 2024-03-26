@@ -6,7 +6,7 @@ export default function PillContainer({ title, color }) {
       <View
         className="rounded-full w-10 h-10 "
         style={{ backgroundColor: `${color}` }}
-      ></View>
+      />
       <Text className="text-base font-semiBold">{title}</Text>
     </View>
   );

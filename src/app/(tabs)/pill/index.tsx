@@ -8,11 +8,11 @@ import {
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import DrugContainer from "@/components/DrugContainer";
-import { Link } from "expo-router";
+import { Link, router, useNavigation, useRouter } from "expo-router";
 import PillContainer from "@/components/PillContainer";
 
 export default function PillScreen() {
-  const DATA = [
+  let DATA = [
     {
       id: 1,
       title: "Dipirona",
@@ -31,6 +31,8 @@ export default function PillScreen() {
     },
   ];
 
+  const router = useRouter();
+
   return (
     <SafeAreaView style={{ flex: 1 }} className="bg-white">
       <View style={{ flex: 1 }}>
@@ -41,23 +43,28 @@ export default function PillScreen() {
           <Text className="font-bold text-xl">Registrar</Text>
         </View>
         <View className="p-4">
-          <Link href="/(tabs)/pill/register" asChild>
-            <TouchableOpacity className="p-4 rounded-lg bg-cyan-50">
-              <View className="justify-between flex-row">
-                <Text className="font-semibold text-md">07:00</Text>
-                <Feather name="plus" size={20} color="blue" />
-              </View>
-              <ScrollView contentContainerStyle={{ marginTop: 8 }}>
-                {DATA.map((item) => (
-                  <PillContainer
-                    title={item.title}
-                    color={item.color}
-                    key={item.id}
-                  />
-                ))}
-              </ScrollView>
-            </TouchableOpacity>
-          </Link>
+          <TouchableOpacity
+            className="p-4 rounded-lg bg-cyan-50"
+            onPress={() =>
+              router.navigate({
+                pathname: "/(tabs)/pill/[medicines]",
+              })
+            }
+          >
+            <View className="justify-between flex-row">
+              <Text className="font-semibold text-md">07:00</Text>
+              <Feather name="plus" size={20} color="blue" />
+            </View>
+            <ScrollView contentContainerStyle={{ marginTop: 8 }}>
+              {DATA.map((item) => (
+                <PillContainer
+                  title={item.title}
+                  color={item.color}
+                  key={item.id}
+                />
+              ))}
+            </ScrollView>
+          </TouchableOpacity>
         </View>
         <View className="flex-1 p-4 bg-[#ededed]">
           <View className="flex-row items-center justify-between">
@@ -66,7 +73,7 @@ export default function PillScreen() {
               <Text className="text-[#88beff] font-bold">Editar</Text>
             </TouchableOpacity>
           </View>
-          <TouchableOpacity className="bg-white mb-4 p-2 rounded-lg">
+          <TouchableOpacity className="bg-white mb-4 p-4 rounded-lg">
             <Text className="text-[#88beff] font-bold">
               Adicionar medicamento
             </Text>
