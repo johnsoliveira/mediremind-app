@@ -5,7 +5,7 @@ export default function PillLayoutNav() {
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="index" />
       <Stack.Screen
-        name="[medicines]"
+        name="register"
         options={{
           presentation: "modal",
         }}

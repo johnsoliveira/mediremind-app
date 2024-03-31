@@ -11,7 +11,7 @@ export default function DrugContainer({
 }) {
   return (
     <TouchableOpacity
-      className="shadow-xl flex-row h-24 bg-white rounded-lg mb-2"
+      className="shadow-sm flex-row h-24 bg-white rounded-lg mb-2"
       onPress={onPress}
     >
       <View

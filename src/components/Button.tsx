@@ -54,6 +54,7 @@ interface ButtonProps
   label: string;
   labelClasses?: string;
   icon?: JSX.Element;
+  disabled?: boolean;
 }
 function Button({
   label,
@@ -62,6 +63,7 @@ function Button({
   variant,
   size,
   icon,
+  disabled,
   ...props
 }: ButtonProps) {
   return (
