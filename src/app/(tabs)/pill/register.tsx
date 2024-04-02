@@ -60,7 +60,7 @@ export default function RegisterDrug() {
               Registrar medicamento
             </Text>
             <Text className="text-black text-3xl font-bold">
-              Medicamentos ás ${format(todayDate, "HH:mm")}
+              Medicamentos ás {format(todayDate, "HH:mm")}
             </Text>
             <Text className="text-black text-black text-base">
               {medications.length} Medicamentos

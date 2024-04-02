@@ -45,7 +45,7 @@ export default function MedicineContainer({
               !taken ? "rgba(2, 122, 254, 1)" : "rgba(2, 122, 254, 0.2)"
             }`,
           }}
-          icon={!taken && <AntDesign name="closecircle" />}
+          icon={!taken && <AntDesign name="closecircle" size={15} />}
           onPress={() => handleTakenChange(false)}
         />
 
@@ -59,7 +59,7 @@ export default function MedicineContainer({
             }`,
           }}
           size="sm"
-          icon={taken && <AntDesign name="checkcircle" />}
+          icon={taken && <AntDesign name="checkcircle" size={15} />}
           onPress={() => handleTakenChange(true)}
         />
       </View>
